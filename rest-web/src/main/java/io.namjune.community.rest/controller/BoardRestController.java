@@ -28,7 +28,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/api/boards")
 public class BoardRestController {
 
-    private BoardRepository boardRepository;
+    private final BoardRepository boardRepository;
 
     @GetMapping(produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<?> getBoards(@PageableDefault Pageable pageable) {

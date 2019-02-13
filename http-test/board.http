@@ -1,5 +1,32 @@
-###
+### 조회
 GET http://localhost:8081/api/boards
+Content-Type: application/json
+
+### 생성
+POST http://localhost:8081/api/boards
+Content-Type: application/json
+
+{
+  "title": "새로운게시글",
+  "subTitle": "새로운순서",
+  "content": "새로운컨텐츠",
+  "boardType": "free"
+}
+
+### 수정
+PUT http://localhost:8081/api/boards/1
+Content-Type: application/json
+
+{
+  "title": "게시글1",
+  "subTitle": "순서1",
+  "content": "컨텐츠1",
+  "boardType": "free",
+  "createdDate": "2019-02-13T13:23:44"
+}
+
+### 삭제
+DELETE http://localhost:8081/api/boards/1
 Content-Type: application/json
 
 ###
