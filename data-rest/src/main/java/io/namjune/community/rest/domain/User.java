@@ -1,6 +1,8 @@
 package io.namjune.community.rest.domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import io.namjune.community.rest.domain.enums.SocialType;
+import java.io.Serializable;
 import java.time.LocalDateTime;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -18,7 +20,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Entity
 @Table
-public class User {
+public class User implements Serializable {
 
     @Id
     @Column
@@ -29,6 +31,7 @@ public class User {
     private String name;
 
     @Column
+    @JsonIgnore
     private String password;
 
     @Column
