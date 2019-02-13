@@ -1,0 +1,4 @@
+### 조회
+GET http://localhost:8081/api/users/1
+
+###
