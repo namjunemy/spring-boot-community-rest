@@ -29,4 +29,8 @@ Content-Type: application/json
 DELETE http://localhost:8081/api/boards/1
 Content-Type: application/json
 
+### 검색 쿼리 메서드 search
+GET http://localhost:8081/api/boards/search/findByTitle?title=게시글10
+Content-Type: application/json
+
 ###
